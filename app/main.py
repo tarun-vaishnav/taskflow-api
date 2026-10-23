@@ -1,9 +1,11 @@
 from fastapi import FastAPI
 
+from app.config import settings
+
 app = FastAPI(
-    title="TaskFlow API",
-    description="A production-grade task management API",
-    version="0.1.0",
+    title=settings.app_name,
+    description="A production grade Task management API",
+    version=settings.app_version,
 )
 
 @app.get("/health")
